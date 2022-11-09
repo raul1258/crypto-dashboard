@@ -3,7 +3,8 @@
 :root{
   ---white : #fff;
   ---black: #111;
-  ---blue: #3a88e9
+  ---blue: #3a88e9;
+  ---grey: #888;
 }
 
 
@@ -23,3 +24,36 @@ body {
   color: var(---white);
   background-color: var(---blue);
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  border-radius: 1rem;
+  border: 2px solid var(--white);
+}
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+  background: red;
+  transition: all 0.5s;
+} */
+
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+
