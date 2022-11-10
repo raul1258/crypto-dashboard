@@ -5,6 +5,7 @@ import styles from "./styles.module.css";
 
 function Header() {
   return (
+    <div>
     <div className={styles.navbar}>
       <h1 className={styles.heading}>
         CryptoTracker<span style={{ color: "var(--blue)" }}>.</span>
@@ -18,10 +19,10 @@ function Header() {
         </a>
         <a href="/dashboard">
           <Button text="dashboard" />
-          {/* <dashboard/> */}
         </a>
       </div>
       <MobileDrawer />
+    </div>
     </div>
   );
 }

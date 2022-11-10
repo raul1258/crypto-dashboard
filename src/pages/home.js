@@ -4,7 +4,7 @@ import LandingIntro from "../components/LandingPage/Intro";
 
 function Home() {
   return (
-    <div>
+    <div style={{minHeight:"200vh"}}>
       <Header />
       <LandingIntro />
     </div>
