@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../../Common/Button/Button";
+import styles from "./styles.module.css"
 
-import styles from "./styles.module.css";
 function LandingIntro() {
   return (
     <div className={styles.wrapper}>
@@ -12,10 +12,10 @@ function LandingIntro() {
           Track crypto through a public api in real time. Visit the dashboard to
           do so!
         </p>
-        {/* <div className={styles.flexBtn}>
+        <div className={styles.flexBtn}>
           <Button text="Dashboard" />
           <Button text="Share" outlined={true} />
-        </div> */}
+        </div>
       </div>
       <div className={styles.phone}></div>
     </div>

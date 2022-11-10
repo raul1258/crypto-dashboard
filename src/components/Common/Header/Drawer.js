@@ -1,28 +1,31 @@
-import React from "react";
-import Button from "../Button/Button";
-import MobileDrawer from "./Drawer";
+import { useState } from "react";
+import Drawer from "@mui/material/Drawer";
+import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import styles from "./styles.module.css";
 
-function Header() {
+export default function MobileDrawer() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <div className={styles.navbar}>
-      <h1 className={styles.heading}>
-        CryptoTracker<span style={{ color: "var(--blue)" }}>.</span>
-      </h1>
-      <div className={styles.links}>
-        <a href="/">
-          <p className={styles.link}>Home</p>
-        </a>
-        <a href="/compare">
-          <p className={styles.link}>Compare</p>
-        </a>
-        <a href="/dashboard">
-          <Button text="dashboard" />
-        </a>
-      </div>
-      <MobileDrawer />
+    <div className={styles.drawerDiv}>
+      <MenuRoundedIcon
+        className={styles.link}
+        style={{ fontSize: "1.5rem", margin: 0 }}
+        onClick={() => setOpen(true)}
+      />
+      <Drawer anchor={"right"} open={open} onClose={() => setOpen(false)}>
+        <div className={styles.drawer}>
+          <a href="/">
+            <p className={styles.link}>Home</p>
+          </a>
+          <a href="/compare">
+            <p className={styles.link}>Compare</p>
+          </a>
+          <a href="/dashboard">
+            <p className={styles.link}>Dashboard</p>
+          </a>
+        </div>
+      </Drawer>
     </div>
   );
 }
-
-export default Header;
