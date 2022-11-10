@@ -1,8 +1,7 @@
-import React from 'react'
-import styles from "./style.module.css";
-import MobileDrawer from "./Drawer";
+import React from "react";
 import Button from "../Button/Button";
-
+import MobileDrawer from "./Drawer";
+import styles from "./styles.module.css";
 
 function Header() {
   return (
@@ -18,13 +17,13 @@ function Header() {
           <p className={styles.link}>Compare</p>
         </a>
         <a href="/dashboard">
-          <dashboard />
+          <Button text="dashboard" />
+          {/* <dashboard/> */}
         </a>
       </div>
       <MobileDrawer />
     </div>
-
-  )
+  );
 }
 
-export default Header
+export default Header;
