@@ -12,7 +12,7 @@
 
 
 .heading {
-  font-size: 1.4rem;
+  font-size: 2rem;
 }
 
 .links {
@@ -26,7 +26,7 @@
   color: var(--grey);
   text-decoration: none !important;
   font-weight: 600;
-  font-size: 0.8rem;
+  font-size: 1rem;
   cursor: pointer;
 }
 

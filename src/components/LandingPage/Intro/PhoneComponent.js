@@ -1,9 +1,8 @@
 import React from 'react';
+import "./styles.css";
 import gradient from "../../../assets/gradient.png";
 import iphone from "../../../assets/iphone.png";
 import { motion } from "framer-motion";
-
-
 
 function PhoneComponent() {
   return (

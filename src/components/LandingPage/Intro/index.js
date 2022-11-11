@@ -10,19 +10,20 @@ function LandingIntro() {
       <div className="info">
         <motion.h1 
         className="bigHeading"
-        initial={{y:50, opacity:0}}
-        whileInView={{y:0, opacity:1}}
-        transition={{duration:.5}}
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ type: "spring", duration: 1 }}
         >
           Track Crypto
           </motion.h1>
+
         <motion.h1 className="bigHeading2"
         initial={{y:50, opacity:0}}
         whileInView={{y:0, opacity:1}}
         transition={{duration:0.5}}
-        
         >
           Real Time.</motion.h1>
+
         <motion.p className="para"
         initial={{y:50, opacity:0}}
         whileInView={{y:0, opacity:1}}
@@ -31,6 +32,7 @@ function LandingIntro() {
           Track crypto through a public api in real time. Visit the dashboard to
           do so!
         </motion.p>
+
         <motion.div className="flexBtn"
         initial={{y:50, opacity:0}}
         whileInView={{y:0, opacity:1}}

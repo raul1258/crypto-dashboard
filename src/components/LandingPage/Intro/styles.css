@@ -1,13 +1,16 @@
 .wrapper {
-  padding: 1rem 1.5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+
+
 }
 
 .bigHeading,
 .bigHeading2 {
-  font-size: 6rem;
+  font-size: 8rem;
   margin: 0;
   color: var(--white);
   font-weight: 800;
@@ -15,17 +18,20 @@
 
 .bigHeading2 {
   color: var(--blue);
+  text-align: left;
 }
 
 .bigHeading:hover {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--white);
   color: var(--black);
-  -webkit-text-stroke: 2px var(--white);
   transition: all 0.3s;
 }
 
 .para {
   color: var(--grey);
-  font-weight: 300;
+  font-weight: 400;
+  text-align: left;
 }
 
 .flexBtn {
@@ -34,33 +40,56 @@
   align-items: center;
   gap: 1rem;
   margin-top: 2rem;
+  
 }
 
 .phone-box {
-  position: relative;
-  width: 50%;
-  display: block;
-  margin-left: auto;
+ position : relative;
+  width: 40%;
+  height: 100%;
+  right: 4rem;
+  margin-top: 2rem;
 }
 
 .gradient {
   position: absolute;
-  top: 5rem;
-  right: 3rem;
-  z-index: -1;
-  width: 40%;
+  width: 55%;
+  object-fit: contain;
+  top: 7rem;
+  right: 0rem;
   min-width: 200px;
 }
 
 .phone {
+  width: 65%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   position: absolute;
   top: 0;
-  right: 2rem;
-  width: 50%;
-  min-width: 250px;
+  right: 0;
+  min-width: 270px;
 }
 
-@media only screen and (max-width: 974px) {
+@media only screen and (max-width: 1200px) {
+  .bigHeading,
+  .bigHeading2 {
+    font-size: 5rem;
+    text-align: center;
+  }
+  .phone-box{
+    width: 50%;
+  }
+  .phone {
+    min-width: 200px;
+  }
+  .gradient {
+    top: 6rem;
+    min-width: 150px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
   .info {
     display: block;
     margin-left: auto;
@@ -79,18 +108,22 @@
 
   .wrapper {
     flex-direction: column;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    justify-content: flex-start;
+    align-items: center;
   }
   .phone-box {
-    margin-top: 3rem;
-    /* margin-left: auto;
-    margin-right: auto; */
+    width: 100%;
+    margin-top: 5rem;
+
   }
   .gradient,
   .phone {
     margin-left: auto;
     margin-right: auto;
   }
-/* 
+ 
   .gradient {
     left: 1rem;
   }
@@ -98,7 +131,8 @@
   
   .phone {
     left: -1rem;
-  }  */
+    max-width: 800px;
+  }  
 
   .flexBtn {
     display: flex;
