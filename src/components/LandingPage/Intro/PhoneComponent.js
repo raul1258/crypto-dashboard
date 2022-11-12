@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 function PhoneComponent() {
   return (
     <div className="phone-box">
-    <img className="gradient" src={gradient} />
+    <img className="gradient" src={gradient} alt="gradient" />
     <motion.img
       className="phone"
       src={iphone}
