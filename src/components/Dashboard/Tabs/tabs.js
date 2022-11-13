@@ -41,6 +41,19 @@ export default function Tabs({ data }) {
             </TabList>
           </div>
           <TabPanel value={"grid"}>
+            <div>
+              <label>Select Currency </label>
+          <select class="form-select" id="currency">
+            <option value="USD" selected>USD ($)</option>
+            <option value="INR">INR</option>
+          </select>
+          <label>Sort </label> 
+          <select class="form-select" id="sort">
+            <option value="" selected>Select...</option>
+            <option value="gain">Top Gainer</option>
+            <option value="loser">Top Loser</option>
+          </select>
+            </div>
             <div className="grid-flex">
               {data.map((item,i) => (
                 <Grid coin={item}/>

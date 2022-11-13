@@ -1,9 +1,14 @@
 .grid-flex {
   display: flex;
-  /* flex-direction: row; */
   justify-content: center;
   align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
   margin: 1rem 2rem;
+}
+.form-select{
+  background-color: var(--darkgrey);
+  color: white;
+  font-size: medium;
+  border-radius: 1rem;
 }
