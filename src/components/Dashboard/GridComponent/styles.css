@@ -2,7 +2,7 @@
   width: 180px;
   height: 200px;
   display: flex;
-   flex-direction: column;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start; 
   gap: 1.25rem;
@@ -29,7 +29,7 @@
 .name-flex p {
   margin: 0;
   margin-bottom: 0.2rem;
-  color: white;
+  
 }
 
 .coin-symbol {
