@@ -23,9 +23,7 @@ function DashboardPage() {
     <div>
       <Header />
       <Tabs data={data} />
-      <div>
-        list 
-      </div>
+      
     </div>
   );
 }
