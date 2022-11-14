@@ -6,12 +6,12 @@ import { motion } from "framer-motion";
 
 import "./styles.css";
 
-function Grid({ coin }) {
+function Grid({ coin, delay }) {
   return (
     <motion.div className={`grid-box ${coin.price_change_percentage_24h < 0 && "grid-box-red"}`}
     initial={{ opacity: 0, y: 50 }}
     animate={{ opacity: 1, y: 0 }}
-    transition={{ type: "spring", duration: .5 }}
+    transition={{ type: "spring", duration: .5, delay: delay}}
     >
       <div className="info-flex">
         <img src={coin.image} className="coin-logo" alt="coinicon"/>
