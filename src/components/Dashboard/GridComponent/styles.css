@@ -120,4 +120,8 @@
   .grid-box {
     width: 100% !important;
   }
+  .coin-chip{
+    min-width: px;
+    padding: 0.25rem 0.5rem;
+  }
 }

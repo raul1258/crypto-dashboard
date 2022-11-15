@@ -68,7 +68,7 @@
     }
     .name-text,
     .td-vol-cap {
-      font-size: 70%;
+      font-size: 60%;
     }
   
     .td-img img {
@@ -82,5 +82,8 @@
       padding: 0.5rem;
       margin: 0.5rem 0rem;
       gap: 0.1rem;
+    }
+    .td-vol-cap {
+      display: none;
     }
   }
