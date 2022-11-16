@@ -75,7 +75,11 @@ function DashboardPage() {
   return (
     <div>
       <Header />
-      
+      {loading ? (
+        <Loading />
+      ) : (
+
+        <>
       <Search search={search} setSearch={setSearch} />
 
 
@@ -83,10 +87,14 @@ function DashboardPage() {
       <div onClick={() => topFunction()} id="myBtn" className="top-btn">
             <ArrowUpwardIcon sx={{ color: "var(--blue)" }} />
       </div>
-      <PaginationComponent
+      {!search && (
+            <PaginationComponent
               pageNumber={pageNumber}
               handleChange={handleChange}
-      />
+            />
+          )}
+        </>
+      )}
 
     </div>
   );
