@@ -8,6 +8,7 @@ import "./styles.css";
 
 function Grid({ coin, delay }) {
   return (
+    <a href={`/coin/${coin.id}`}>
     <motion.div className={`grid-box ${coin.price_change_percentage_24h < 0 && "grid-box-red"}`}
     initial={{ opacity: 0, y: 50 }}
     animate={{ opacity: 1, y: 0 }}
@@ -59,6 +60,7 @@ function Grid({ coin, delay }) {
       </div>
 
     </motion.div>
+    </a>
   );
 }
 

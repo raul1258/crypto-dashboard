@@ -60,6 +60,8 @@ img {
 
 a {
   text-decoration: none;
+  color: var(--white) !important;
+
 }
 
 .top-btn {
@@ -76,4 +78,11 @@ a {
   bottom: 2rem;
   border: 2px solid var(--blue);
   cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+  .top-btn {
+    right: 0.5rem;
+    bottom: 0.5rem;
+  }
 }
