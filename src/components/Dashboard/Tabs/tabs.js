@@ -65,7 +65,7 @@ export default function Tabs({ data }) {
           <TabPanel value={"list"}>
           <div className="List-flex">
               {data.map((item,i) => (
-                <List coin={item} delay={(i%5)*0.1}/>
+                <List coin={item} delay={(i%7)*0.1}/>
                 // <List coin={item}/>
               ))}
               

@@ -1,0 +1,11 @@
+.desc-links{
+    text-align: left;
+}
+.desc-links a { 
+    color: var(--white) !important;
+    text-decoration: underline;
+}
+.desc-links a:hover{
+    color: var(--blue) !important   ;
+
+}
