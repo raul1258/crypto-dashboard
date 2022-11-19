@@ -161,7 +161,7 @@ function CoinPage() {
             <List coin={coin} delay={0.5} />
           </div>
           <div className="grey-container">
-            <SelectDays days={days} handleChange={handleDaysChange} />
+            {/* <SelectDays days={days} handleChange={handleDaysChange} /> */}
             <TogglePrice
               priceType={priceType}
               handleChange={handlePriceChange}
