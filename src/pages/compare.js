@@ -114,7 +114,7 @@ function ComparePage() {
         image: data1.image.large,
         desc: data1.description.en,
         price_change_percentage_24h:
-          data1.market_data.price_change_percentage_24h,
+        data1.market_data.price_change_percentage_24h,
         total_volume: data1.market_data.total_volume.usd,
         current_price: data1.market_data.current_price.usd,
         market_cap: data1.market_data.market_cap.usd,
@@ -130,7 +130,7 @@ function ComparePage() {
         image: data2.image.large,
         desc: data2.description.en,
         price_change_percentage_24h:
-          data2.market_data.price_change_percentage_24h,
+        data2.market_data.price_change_percentage_24h,
         total_volume: data2.market_data.total_volume.usd,
         current_price: data2.market_data.current_price.usd,
         market_cap: data2.market_data.market_cap.usd,
@@ -174,7 +174,7 @@ function ComparePage() {
   };
 
   const handleCoinChange = async (e, iscoin2) => {
-    if (!coin2) {
+    if (!iscoin2) {
       setCoin1(e.target.value);
       const data1 = await getCoinData(e.target.value);
       if (data1) {
@@ -204,7 +204,7 @@ function ComparePage() {
           image: data2.image.large,
           desc: data2.description.en,
           price_change_percentage_24h:
-            data2.market_data.price_change_percentage_24h,
+          data2.market_data.price_change_percentage_24h,
           total_volume: data2.market_data.total_volume.usd,
           current_price: data2.market_data.current_price.usd,
           market_cap: data2.market_data.market_cap.usd,
@@ -222,23 +222,20 @@ function ComparePage() {
 
   return (
     <>
-      <Header />
-      <div className="div-flex" >
-        {/* <div style={{display:"flex", gap:"1rem", alignItems:"center"}}> */}
-        <p>Coin 1</p>
+            <Header />
+      <div className="div-flex">
+        <p className="crypto-heading">Crypto 1</p>
         <SelectCoin
           coin={coin1}
           handleChange={(e) => handleCoinChange(e)}
           allCoins={allCoins.filter((coin) => coin.id != coin2)}
         />
-
-        <p>Coin 2</p>
+        <p className="crypto-heading">Crypto 2</p>
         <SelectCoin
           coin={coin2}
-          handleChange={(e) => handleCoinChange(e,true)}
+          handleChange={(e) => handleCoinChange(e, true)}
           allCoins={allCoins.filter((coin) => coin.id != coin1)}
         />
-        {/* </div> */}
         <SelectDays
           noText={true}
           days={days}
@@ -263,18 +260,14 @@ function ComparePage() {
               priceType={priceType}
               handleChange={handlePriceChange}
             />
-
-          
-          <LineChart chartData={chartData} options={options} />
+            <LineChart chartData={chartData} options={options} />
           </div>
-
           <div className="grey-container">
             <Info name={coinData1.name} desc={coinData1.desc} />
           </div>
           <div className="grey-container">
             <Info name={coinData2.name} desc={coinData2.desc} />
           </div>
-
         </>
       )}
     </>
