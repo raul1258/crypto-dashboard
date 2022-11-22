@@ -42,7 +42,7 @@ export default function Tabs({ data }) {
             </TabList>
           </div>
           <TabPanel value={"grid"}>
-            <div>
+            {/* <div>
               <label>Select Currency </label>
           <select class="form-select" id="currency">
             <option value="USD" selected>USD ($)</option>
@@ -54,7 +54,7 @@ export default function Tabs({ data }) {
             <option value="gain">Top Gainer</option>
             <option value="loser">Top Loser</option>
           </select>
-            </div>
+            </div> */}
             <div className="grid-flex">
               {data.map((item,i) => (
                 <Grid coin={item} key={i} delay={(i%5)*0.1}/>
