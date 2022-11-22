@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../../Common/Button/Button";
+import { RWebShare } from "react-web-share";
 import "./styles.css";
 import {motion} from "framer-motion";
 import PhoneComponent from "./PhoneComponent";
@@ -39,7 +40,17 @@ function LandingIntro() {
         transition={{duration:0.5}}
         >
           <Button text="Dashboard" />
-          <Button text="Share" outlined={true} />
+          <RWebShare
+            data={{
+              text: "Crypto Dashboard made using React JS in 2022",
+              url: "https://crypto-dashboard-nov.netlify.app/",
+              title: "Crypto Dashboard",
+            }}
+            onClick={() => console.log("shared successfully!")}
+          >
+            <Button text="Share" outlined={true} />
+          </RWebShare>
+
         </motion.div>
       </div>
       <div><PhoneComponent/></div>
