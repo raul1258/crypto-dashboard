@@ -7,6 +7,7 @@ import LineChart from "../components/Coin/Chart";
 import Header from "../components/Common/Header";
 import Loading from "../components/Common/Loading/loading";
 import List from "../components/Dashboard/ListComponent/List";
+import TogglePrice from "../components/Coin/ToggleComponent/toggle";
 import { DASHBOARD_API_URL } from "../constants";
 import { getCoinData } from "../functions/getCoinData";
 import { convertNumbers } from "../functions/convertNumber";
@@ -105,7 +106,7 @@ function ComparePage() {
     const data2 = await getCoinData(coin2);
 
     if (data1) {
-      console.log("data1", data1);
+      // console.log("data1", data1);
       setCoinData1({
         id: data1.id,
         name: data1.name,
@@ -121,7 +122,7 @@ function ComparePage() {
     }
 
     if (data2) {
-      console.log("data2", data2);
+      // console.log("data2", data2);
       setCoinData2({
         id: data2.id,
         name: data2.name,
@@ -147,7 +148,7 @@ function ComparePage() {
       labels: prices1?.map((data) => getDate(data[0])),
       datasets: [
         {
-          label: `${coin1}`,
+          label: coin1.slice(0, 1).toUpperCase() + coin1.slice(1),
           data: prices1?.map((data) => data[1]),
           borderWidth: 1,
           fill: false,
@@ -158,7 +159,7 @@ function ComparePage() {
           yAxisID: "y",
         },
         {
-          label: `${coin2}`,
+          label: coin2.slice(0, 1).toUpperCase() + coin2.slice(1),
           data: prices2?.map((data) => data[1]),
           borderWidth: 1,
           fill: false,
@@ -213,11 +214,17 @@ function ComparePage() {
     }
   };
 
+  const handlePriceChange = (event) => {
+    setPriceType(event.target.value);
+    getPrices(coin1, coin2, days, event.target.value);
+  };
+
+
   return (
     <>
       <Header />
-      <div className="div-flex">
-        <div style={{display:"flex", gap:"1rem", alignItems:"center"}}>
+      <div className="div-flex" >
+        {/* <div style={{display:"flex", gap:"1rem", alignItems:"center"}}> */}
         <p>Coin 1</p>
         <SelectCoin
           coin={coin1}
@@ -228,14 +235,17 @@ function ComparePage() {
         <p>Coin 2</p>
         <SelectCoin
           coin={coin2}
-          handleChange={(e) => handleCoinChange(e, true)}
+          handleChange={(e) => handleCoinChange(e,true)}
           allCoins={allCoins.filter((coin) => coin.id != coin1)}
         />
-        </div>
+        {/* </div> */}
         <SelectDays
           noText={true}
           days={days}
-          handleChange={(e) => setDays(e.target.value)}
+          handleChange={(e) => {
+            setDays(e.target.value);
+            getPrices(coin1, coin2, e.target.value, priceType);
+          }}
         />
       </div>
       {loading ? (
@@ -248,7 +258,16 @@ function ComparePage() {
           <div className="grey-container">
             <List coin={coinData2} />
           </div>
+          <div className="grey-container">
+            <TogglePrice
+              priceType={priceType}
+              handleChange={handlePriceChange}
+            />
+
+          
           <LineChart chartData={chartData} options={options} />
+          </div>
+
           <div className="grey-container">
             <Info name={coinData1.name} desc={coinData1.desc} />
           </div>
