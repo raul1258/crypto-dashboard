@@ -39,11 +39,13 @@ function LandingIntro() {
         whileInView={{y:0, opacity:1}}
         transition={{duration:0.5}}
         >
-          <Button text="Dashboard" />
+          <a href="/dashboard">
+            <Button text="Dashboard" />
+          </a>
           <RWebShare
             data={{
-              text: "Crypto Dashboard made using React JS in 2022",
-              url: "https://crypto-dashboard-nov.netlify.app/",
+              text: "Crypto Dashboard made using React JS and its Made By Rahul Jaiswal",
+              url: "https://accio-cryptotracker.netlify.app/",
               title: "Crypto Dashboard",
             }}
             onClick={() => console.log("shared successfully!")}
