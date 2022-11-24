@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import TrendingDownRoundedIcon from "@mui/icons-material/TrendingDownRounded";
 import TrendingUpRoundedIcon from "@mui/icons-material/TrendingUpRounded";
 import { motion } from "framer-motion";
+// import Tooltip from "@mui/material/Tooltip";
 import "./styles.css";
 import BookmarkBorderRoundedIcon from "@mui/icons-material/BookmarkBorderRounded";
 import { addToWatchlist } from "../../../functions/addToWatchlist";
@@ -47,7 +48,9 @@ function Grid({ coin, delay }) {
             }}
           >
             <IconButton>
+            
               <BookmarkRoundedIcon className="bookmark-icon" />
+
             </IconButton>
           </div>
         ) : (
@@ -59,6 +62,7 @@ function Grid({ coin, delay }) {
             }}
           >
             <IconButton>
+
               <BookmarkBorderRoundedIcon className="bookmark-icon" />{" "}
             </IconButton>
           </div>

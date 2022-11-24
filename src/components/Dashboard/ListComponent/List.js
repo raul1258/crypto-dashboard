@@ -104,14 +104,16 @@ function List({ coin, delay }) {
 
           <p>${coin.total_volume.toLocaleString()}</p>
           </Tooltip>
-
+      
         </td>
+        </a>
+      <a href={`/coin/${coin.id}`}>
         <td className="td-mkt-cap">
         <Tooltip title="Market Capital">
 
           <p>${coin.market_cap.toLocaleString()}</p>
           </Tooltip>
-
+          
         </td>
       </a>
       <a href={`/coin/${coin.id}`}>
@@ -133,7 +135,10 @@ function List({ coin, delay }) {
             }}
           >
             <IconButton>
+            <Tooltip title="Remove From WatchList">
+
               <BookmarkRoundedIcon className="bookmark-icon" />
+            </Tooltip>
             </IconButton>
           </div>
         ) : (
@@ -145,7 +150,9 @@ function List({ coin, delay }) {
             }}
           >
             <IconButton>
+            <Tooltip title="Add to WatchList">
               <BookmarkBorderRoundedIcon className="bookmark-icon" />
+            </Tooltip>
             </IconButton>
           </div>
         )}
