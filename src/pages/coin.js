@@ -79,7 +79,7 @@ function CoinPage() {
         image: data.image.large,
         desc: data.description.en,
         price_change_percentage_24h:
-          data.market_data.price_change_percentage_24h,
+        data.market_data.price_change_percentage_24h,
         total_volume: data.market_data.total_volume.usd,
         current_price: data.market_data.current_price.usd,
         market_cap: data.market_data.market_cap.usd,
@@ -107,6 +107,7 @@ function CoinPage() {
   };
 
   const handleDaysChange = async (event) => {
+    setDays(event.target.value);
     const prices = await getCoinPrices(id, event.target.value, priceType);
     if (prices) {
       setChartData({
@@ -125,7 +126,6 @@ function CoinPage() {
         ],
       });
     }
-    setDays(event.target.value);
   };
 
   const handlePriceChange = async (event) => {
