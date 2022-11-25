@@ -14,7 +14,7 @@ function footer() {
       <a href="/">
         <h2 style={{ color: "#fff" }}>CryptoTracker.</h2>
       </a>
-      <h4 className='madeBy'>Made By Rahul Jaiswal</h4>
+      <h4 className='madeBy'>❤️ Made By Rahul Jaiswal ❤️</h4>
       <div className="socials-flex">
         <a href="https://www.facebook.com/rahul123295">
           <FacebookIcon className="socials-icon" />
