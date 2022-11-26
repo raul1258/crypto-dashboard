@@ -9,6 +9,7 @@ import { addToWatchlist } from "../../../functions/addToWatchlist";
 import BookmarkRoundedIcon from "@mui/icons-material/BookmarkRounded";
 import { removeFromWatchlist } from "../../../functions/removeFromWatchlist";
 import IconButton from "@mui/material/IconButton";
+import LabelIcon from '@mui/icons-material/Label';
 
 
 
@@ -29,8 +30,9 @@ function Grid({ coin, delay }) {
         coin.price_change_percentage_24h < 0 && "grid-box-red"
       }`}
     >
+      
       <div className="info-flex">
-        <a href={`/coin/${coin.id}`}>
+          <a href={`/coin/${coin.id}`}>
           <img src={coin.image} className="coin-logo" />
         </a>
         <a href={`/coin/${coin.id}`}>

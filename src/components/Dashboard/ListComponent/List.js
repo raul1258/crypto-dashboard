@@ -33,6 +33,10 @@ function List({ coin, delay }) {
       whileInView={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.3, delay: delay }}
     >
+      <td className="td-img" style={{color:"var(--white)"}}>
+      {coin.market_cap_rank}
+      </td>
+      
       <a href={`/coin/${coin.id}`}>
         <td className="td-img">
         <Tooltip title="Logo">
@@ -125,7 +129,7 @@ function List({ coin, delay }) {
 
         </td>
       </a>
-      <td>
+      <td className="td-img">
         {isWatchlist || isAdded ? (
           <div
             className="bookmark-icon-div"

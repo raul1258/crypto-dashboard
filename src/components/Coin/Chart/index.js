@@ -6,7 +6,9 @@ import { Chart as ChartJS } from "chart.js/auto";
 function LineChart({ chartData, options }) {
   return (
     
-      <Line data={chartData} options={options} />
+      <Line data={chartData} options={options} />  
+
+      
     
   );
 }
