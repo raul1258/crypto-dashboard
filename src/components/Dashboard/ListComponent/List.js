@@ -33,10 +33,11 @@ function List({ coin, delay }) {
       whileInView={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.3, delay: delay }}
     >
+       <a href={`/coin/${coin.id}`}>
       <td className="td-img" style={{color:"var(--white)"}}>
       {coin.market_cap_rank}
       </td>
-      
+      </a>
       <a href={`/coin/${coin.id}`}>
         <td className="td-img">
         <Tooltip title="Logo">
