@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import TrendingDownRoundedIcon from "@mui/icons-material/TrendingDownRounded";
 import TrendingUpRoundedIcon from "@mui/icons-material/TrendingUpRounded";
 import { motion } from "framer-motion";
-// import Tooltip from "@mui/material/Tooltip";
+import Tooltip from "@mui/material/Tooltip";
 import "./styles.css";
 import BookmarkBorderRoundedIcon from "@mui/icons-material/BookmarkBorderRounded";
 import { addToWatchlist } from "../../../functions/addToWatchlist";
@@ -50,9 +50,9 @@ function Grid({ coin, delay }) {
             }}
           >
             <IconButton>
-            
+            <Tooltip title="Remove From WatchList">
               <BookmarkRoundedIcon className="bookmark-icon" />
-
+            </Tooltip>
             </IconButton>
           </div>
         ) : (
@@ -64,8 +64,9 @@ function Grid({ coin, delay }) {
             }}
           >
             <IconButton>
-
-              <BookmarkBorderRoundedIcon className="bookmark-icon" />{" "}
+            <Tooltip title="Add To WatchList">
+              <BookmarkBorderRoundedIcon className="bookmark-icon" />
+            </Tooltip>
             </IconButton>
           </div>
         )}
