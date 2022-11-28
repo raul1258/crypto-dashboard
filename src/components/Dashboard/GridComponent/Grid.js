@@ -30,7 +30,7 @@ function Grid({ coin, delay }) {
         coin.price_change_percentage_24h < 0 && "grid-box-red"
       }`}
     >
-      <div style={{color:"var(--white)"}}>Market Rank : {coin.market_cap_rank}</div>
+      <div style={{color:"var(--white)"}} >Market Rank : <span className="rank-badge"> {coin.market_cap_rank} </span></div>
       <div className="info-flex">
           <a href={`/coin/${coin.id}`}>
           <img src={coin.image} className="coin-logo" />

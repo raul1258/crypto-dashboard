@@ -19,6 +19,11 @@
   width: 100%;
   gap: 1rem;
 }
+.rank-badge{
+  background-color: rgb(92, 92, 234);
+  border-radius: 50%;
+  
+}
 
 .coin-logo {
   width: 2.5rem;

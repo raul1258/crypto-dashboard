@@ -107,7 +107,7 @@ function ComparePage() {
 
     if (data1) {
       // console.log("data1", data1);
-      setCoinData1({
+      setCoinData1({ 
         id: data1.id,
         name: data1.name,
         symbol: data1.symbol,
@@ -185,7 +185,7 @@ function ComparePage() {
           image: data1.image.large,
           desc: data1.description.en,
           price_change_percentage_24h:
-            data1.market_data.price_change_percentage_24h,
+          data1.market_data.price_change_percentage_24h,
           total_volume: data1.market_data.total_volume.usd,
           current_price: data1.market_data.current_price.usd,
           market_cap: data1.market_data.market_cap.usd,
