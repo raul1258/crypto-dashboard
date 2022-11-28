@@ -1,11 +1,12 @@
 .list-row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items:center;
   gap: 1rem;
   padding: 1rem;
   border-radius: 1rem;
   cursor: pointer;
+  /* text-align: left; */
 }
 
 .list-row:hover {
@@ -16,6 +17,7 @@
   text-align: left !important;
   width: 18%;
 }
+
 
 .td-chip-flex {
   min-width: 10rem;
