@@ -5,7 +5,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--black);
+  /* background-color: var(--black); */
+  background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(31, 83, 198, 1) 0%,
+      rgba(0, 212, 255, 1) 100%
+    );
+    margin: 0rem 1.5rem;
+    border-radius: 1rem;
+    animation: gradient 7s ease infinite;
   z-index: 100;
   height: auto;
 }
