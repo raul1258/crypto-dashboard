@@ -42,7 +42,7 @@ function Header() {
   return (
     <div className="navbar">
       <h1 className="heading">
-        CryptoTracker<span style={{ color: "var(--blue)" }}>.</span>
+        CryptoTracker<span style={{ color: "red" }}>.</span>
       </h1>
       <div className="links">
       <Switch
