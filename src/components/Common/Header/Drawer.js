@@ -51,7 +51,7 @@ export default function MobileDrawer() {
       <Drawer anchor={"right"} open={open} onClose={() => setOpen(false)}>
         <div className="drawer">
           <a href="/">
-            <p className="link">Home</p>
+            <p className="link" style={{color:"white"}}>Home</p>
           </a>
           <a href="/compare">
             <p className="link">Compare</p>
