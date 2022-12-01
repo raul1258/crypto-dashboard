@@ -34,7 +34,7 @@
 }
 
 .link {
-  color: black;
+  color: rgb(79, 60, 105);
   text-decoration: none !important;
   font-weight: 600;
   font-size: 1rem;
@@ -59,6 +59,7 @@
 }
 
 @media only screen and (max-width: 800px) {
+  
   .drawerDiv {
     display: block;
   }
